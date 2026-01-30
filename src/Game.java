@@ -10,6 +10,18 @@ public class Game extends Content {
         this.likes = likes;
     }
 
+    public int getPlayersOnline() {
+        return playersOnline;
+    }
+
+    public int getPlayersMax() {
+        return playersMax;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
     @Override
     public void display() {
         System.out.println(this);
