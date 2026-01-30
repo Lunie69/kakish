@@ -1,19 +1,25 @@
-public class Game {
-    public String name;
+public class Game extends Content {
     private int playersOnline;
     private int playersMax;
     private int likes;
 
     public Game(String name, int playersOnline, int playersMax, int likes) {
-        this.name = name;
+        super(name);
         this.playersOnline = playersOnline;
         this.playersMax = playersMax;
         this.likes = likes;
     }
+
+    @Override
     public void display() {
-        System.out.println("Name: " + name +
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Game: " + getTitle() +
                 ", Online: " + playersOnline +
-                ", MaxOnline: " + playersMax +
-                ", Likes: " + likes);
+                ", Max: " + playersMax +
+                ", Likes: " + likes;
     }
 }
